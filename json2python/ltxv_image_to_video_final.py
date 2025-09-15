@@ -1,6 +1,8 @@
 """
 Auto-generated ComfyUI workflow Python script
 Generated from Export (API) JSON format
+
+Коррекция: убран параметр video-preview="" в save_video, так как он не поддерживается в текущей версии ComfyUI.
 """
 
 from comfy_extras.nodes_custom_sampler import KSamplerSelect
@@ -73,7 +75,7 @@ def main():
     # Output available as createvideo_80_output
     
     savevideo_81 = SaveVideo()
-    savevideo_81_output = savevideo_81.save_video(filename_prefix="video/ComfyUI", format="auto", codec="auto", video-preview="", video=createvideo_80_output[0])
+    savevideo_81_output = savevideo_81.save_video(filename_prefix="video/ComfyUI", format="auto", codec="auto", video=createvideo_80_output[0])
     # Output available as savevideo_81_output
     
 
